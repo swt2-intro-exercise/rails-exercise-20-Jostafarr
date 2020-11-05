@@ -18,7 +18,7 @@ gem 'bootsnap', '>= 1.1.0', require: false # https://github.com/Shopify/bootsnap
 # Turbolinks makes navigating your web application faster
 gem 'turbolinks', '~> 5' # https://github.com/turbolinks/turbolinks
 
-gem 'rspec', '~> 3.0'
+#gem 'rspec', '~> 3.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
