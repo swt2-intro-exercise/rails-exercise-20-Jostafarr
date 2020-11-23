@@ -9,8 +9,8 @@ describe 'author edit page', type: :feature do
         last_name: 'Turing',
         homepage:  'http://wikipedia.org/Alan_Turing')
 
-    @author.update(first_name: 'Torben')
-    @author.reload
+    author.update(first_name: 'Torben')
+    author.reload
 
     expect(author.first_name).to eq('Torben')
   end
