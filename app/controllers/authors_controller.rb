@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 class AuthorsController < ApplicationController
+  def index
+    @authors = Author.all
+  end
+
   def show
     @author = Author.find(params[:id])
   end
@@ -10,10 +14,6 @@ class AuthorsController < ApplicationController
 
   def edit
     @author = Author.find(params[:id])
-  end
-
-  def index
-    @authors = Author.all
   end
 
   def create
@@ -36,11 +36,18 @@ class AuthorsController < ApplicationController
     end
   end
 
-  private
+  def destroy
+    @author = Author.find(params[:id])
+    @author.destroy
 
-  def author_params
-    params.require(:author).permit(:first_name, :last_name, :homepage)
+    redirect_to authors_path
   end
+
+
+  private
+    def author_params
+      params.require(:author).permit(:first_name, :last_name, :homepage)
+    end
 
 
 end
