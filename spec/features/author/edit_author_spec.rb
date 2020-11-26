@@ -1,13 +1,7 @@
 require 'rails_helper'
 
 describe 'author edit page', type: :feature do
-  it 'edit page should render' do
-    author = Author.new( first_name: 'Alan',
-                         last_name: 'Turing',
-                         homepage:  'http://wikipedia.org/Alan_Turing')
 
-    author.find(params[:id])
-  end
   it 'update should update' do
 
     author = Author.new(
@@ -21,7 +15,4 @@ describe 'author edit page', type: :feature do
     expect(author.first_name).to eq('Torben')
   end
 
-  it 'edit should work' do
-
-  end
 end
